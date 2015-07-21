@@ -1,7 +1,21 @@
-# Foragers-friend
+# Foragers Friend
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
+
+## Phonegap Setup
+
+You need Phonegap in order to run this project. To install and configure it, follow these steps.
+
+* `npm install -g phonegap`
+* Add a `platforms` folder, then run `phonegap run browser`.
+* In `platforms/browser/run`, add this to the switch statement:
+
+```
+case 'linux':
+  spawn('google-chrome', ['--test-type', '--disable-web-security', '--user-data-dir=/tmp/temp_chrome_user_data_dir_for_cordova_browser', project]);
+  break;
+```
 
 ## Prerequisites
 
