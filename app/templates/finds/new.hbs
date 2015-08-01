@@ -1,0 +1,40 @@
+<h3>New Find</h3>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <form role="form">
+        <div class="form-group">
+          <label>
+            Name of Your Find
+          </label>
+          {{ input value=model.name classNames="form-control" }}
+        </div>
+        <div class="form-group">
+          <label>
+            Description (optional)
+          </label>
+          {{ textarea value=model.description classNames="form-control" }}           
+        </div>
+        <div class="form-group">
+          <label>
+            Location (optional)
+          </label>
+          {{ input value=model.location classNames="form-control" }}           
+        </div>
+        <div class="form-group">
+          <label>
+            Lat
+          </label>
+          {{ input value=model.latitude classNames="form-control" }}
+          <label>
+            Long
+          </label>
+          {{ input value=model.longitude classNames="form-control" }}        
+        </div>
+        <button {{action 'save'}} class="btn btn-default">
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
