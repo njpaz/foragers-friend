@@ -6,7 +6,9 @@ export default Ember.Route.extend({
   },
   actions: {
     delete: function(model){
-      model.destroyRecord();
+      if (confirm("Do you really want to delete this find?")) {
+        model.destroyRecord()
+      }
     }
   }
 });
