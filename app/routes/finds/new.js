@@ -2,13 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function(){
-    return this.store.createRecord('find')
-    // return this.modelFor('find')
+    var model = this.store.createRecord('find');
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+      model.set('latitude', position.coords.latitude);
+      model.set('longitude', position.coords.longitude);
+    });
+
+    return model;
   },
   actions: {
     save: function(model){
+
       model.save();
-      // this.get('model').save();
     }
   }
-})
+});

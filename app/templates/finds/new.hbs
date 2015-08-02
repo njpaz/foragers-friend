@@ -13,23 +13,26 @@
           <label>
             Description (optional)
           </label>
-          {{ textarea value=model.description classNames="form-control" }}           
+          {{ textarea value=model.description classNames="form-control" }}
         </div>
         <div class="form-group">
           <label>
             Location (optional)
           </label>
-          {{ input value=model.location classNames="form-control" }}           
+          {{ input value=model.location classNames="form-control" }}
         </div>
         <div class="form-group">
           <label>
             Lat
           </label>
-          {{ input value=model.latitude classNames="form-control" }}
+          <br />
+          {{model.latitude}}
+          <br />
           <label>
             Long
           </label>
-          {{ input value=model.longitude classNames="form-control" }}        
+          <br />
+          {{model.longitude}}
         </div>
         <button {{action 'save' model}} class="btn btn-default">
           Save
