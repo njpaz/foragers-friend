@@ -11,6 +11,13 @@ export default Ember.Route.extend({
 
     return model;
   },
+  exit: function() {
+    var model = this.get('currentModel');
+
+    if (model.get("isNew") && !model.get("isSaving")) {
+      model.deleteRecord();
+    }
+  },
   actions: {
     save: function(model){
       var _this = this;
