@@ -1,7 +1,8 @@
 import DS from 'ember-data';
 import { Model } from 'ember-pouch';
+import EmberValidations from 'ember-validations';
 
-export default Model.extend({
+export default Model.extend(EmberValidations, {
   title: DS.attr('string'),
   description: DS.attr('string'),
   latitude: DS.attr('string'),
@@ -15,5 +16,12 @@ export default Model.extend({
   }),
   isSaved: function() {
     return !this.get('isNew');
-  }.property('isNew')
+  }.property('isNew'),
+  hasErrors: null,
+
+  validations: {
+    title: {
+      presence: { message: 'must not be blank' }
+    }
+  }
 });

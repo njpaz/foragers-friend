@@ -1,0 +1,8 @@
+{{yield}}
+{{#if model.hasErrors}}
+  <span class='error'>
+  {{#each model.errors.title as |error|}}
+    {{error}}
+  {{/each}}
+  </span>
+{{/if}}

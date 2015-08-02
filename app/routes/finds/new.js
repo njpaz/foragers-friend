@@ -15,9 +15,15 @@ export default Ember.Route.extend({
     save: function(model){
       var _this = this;
 
-      model.save().then(function() {
-        _this.transitionTo('finds');
-      });
+      if (model.get('isValid')) {
+        model.set('hasErrors', false);
+
+        model.save().then(function() {
+          _this.transitionTo('finds');
+        });
+      } else {
+        model.set('hasErrors', true);
+      }
     }
   }
 });
