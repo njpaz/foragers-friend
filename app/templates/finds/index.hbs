@@ -1,4 +1,24 @@
 <h3> Your Finds </h3>
+<table id="finds" class="table table-striped">
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Location</th>
+  <th>Date</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+
 {{#each model as |find|}}
-{{find.title}}
+<tr>
+  <td>{{find.title}}</td>
+  <td>{{find.location}}</td>
+  <td>{{find.createdAt}}</td>
+  <td>
+    <button {{action "delete" find}} class="btn btn-danger btn-sm">X</button>
+  </td>
+</tr>
 {{/each}}
+</tbody>
+</table>

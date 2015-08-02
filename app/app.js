@@ -14,7 +14,7 @@ App = Ember.Application.extend({
 
 document.addEventListener("deviceready", function(){
   loadInitializers(App, config.modulePrefix);  
-}, false)
+}, false);
 
 
 export default App;
