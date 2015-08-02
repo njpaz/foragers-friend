@@ -17,6 +17,13 @@ case 'linux':
   break;
 ```
 
+## Phonegap Plugins:
+
+You need to install these plugins in order to use all of the features:
+
+* `cordova plugin add org.apache.cordova.geolocation`
+* `cordova plugin add org.apache.cordova.statusbar`
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.

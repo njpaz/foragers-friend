@@ -27,5 +27,8 @@ export default Model.extend({
         _this.poll();
       }, 500);      
     }   
-  }.observes('didLoad').on('init')
+  }.observes('didLoad').on('init'),
+  isSaved: function() {
+    return !this.get('isNew');
+  }.property('isNew')
 });

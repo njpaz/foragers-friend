@@ -11,14 +11,16 @@
 <tbody>
 
 {{#each model as |find|}}
-<tr>
-  <td>{{find.title}}</td>
-  <td>{{find.location}}</td>
-  <td>{{find.createdAt}}</td>
-  <td>
-    <button {{action "delete" find}} class="btn btn-danger btn-sm">X</button>
-  </td>
-</tr>
+{{#if find.isSaved}}
+  <tr>
+    <td>{{find.title}}</td>
+    <td>{{find.location}}</td>
+    <td>{{find.createdAt}}</td>
+    <td>
+      <button {{action "delete" find}} class="btn btn-danger btn-sm">X</button>
+    </td>
+  </tr>
+{{/if}}
 {{/each}}
 </tbody>
 </table>
