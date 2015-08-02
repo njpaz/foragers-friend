@@ -12,5 +12,8 @@ export default Model.extend({
   }),
   updatedAt: DS.attr('string', {
       defaultValue() { return new Date(); }
-  })
+  }),
+  isSaved: function() {
+    return !this.get('isNew');
+  }.property('isNew')
 });
