@@ -3,7 +3,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    hinting: false
+    // hinting: false
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -19,7 +19,7 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
+  app.import('vendor/bootstrap.min.css');
   app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
 
   return app.toTree();
