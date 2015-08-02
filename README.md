@@ -22,6 +22,7 @@ case 'linux':
 You need to install these plugins in order to use all of the features:
 
 * `cordova plugin add org.apache.cordova.geolocation`
+* `cordova plugin add org.apache.cordova.statusbar`
 
 ## Prerequisites
 
